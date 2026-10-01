@@ -44,7 +44,6 @@ export default function App(){
         </div>
       </nav>
 
-      {/* HERO */}
       <div className="hero" style={{height:'100vh', display:'flex'}}>
         <div className="hero-left" style={{width:'52%', padding:'0 56px 56px', display:'flex', flexDirection:'column', justifyContent:'center', paddingTop:80}}>
           <p style={{fontSize:10, letterSpacing:'4px', opacity:0.4, marginBottom:24}}>ADILABAD — HYDERABAD</p>
@@ -56,7 +55,7 @@ export default function App(){
           <div onClick={()=>go('work')} style={{marginTop:32, background:'#171717', color:'#FBF8F3', padding:'18px 28px', fontSize:10, letterSpacing:'2px', cursor:'pointer', width:'fit-content'}}>VIEW HOMES →</div>
         </div>
         <div className="hero-right img-zoom" style={{width:'48%', position:'relative'}}>
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400" style={{width:'100%', height:'100vh', objectFit:'cover'}}/>
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1400&auto=format&fit=crop" style={{width:'100%', height:'100vh', objectFit:'cover'}}/>
         </div>
       </div>
 
@@ -65,15 +64,14 @@ export default function App(){
         <span>★ 4.9 RATING • 200+ FAMILIES</span>
       </div>
 
-      {/* ABOUT */}
       <div id="about" className="about" style={{padding:'100px 56px', display:'flex', gap:80}}>
         <div style={{width:'58%'}}>
           <h2 className="serif" style={{fontSize:'56px', lineHeight:0.9, fontWeight:400}}>
             We build <span style={{fontStyle:'italic', color:'#C49A6C'}}>homes where life happens.</span>
           </h2>
           <div style={{marginTop:50, display:'grid', gridTemplateColumns:'1fr 1fr', gap:24}}>
-            <div className="img-zoom"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" style={{width:'100%', height:300, objectFit:'cover'}}/></div>
-            <div className="img-zoom"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600" style={{width:'100%', height:300, objectFit:'cover'}}/></div>
+            <div className="img-zoom"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" style={{width:'100%', height:300, objectFit:'cover'}}/></div>
+            <div className="img-zoom"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=600&auto=format&fit=crop" style={{width:'100%', height:300, objectFit:'cover'}}/></div>
           </div>
         </div>
         <div style={{width:'32%'}}>
@@ -84,26 +82,32 @@ export default function App(){
         </div>
       </div>
 
-      {/* WORKS */}
       <div id="work" className="works" style={{padding:'0 56px 80px'}}>
         <h2 className="serif" style={{fontSize:'42px', marginBottom:40, borderTop:'1px solid #EDE6DC', paddingTop:24}}>Selected homes <span style={{fontStyle:'italic', color:'#C49A6C'}}>2020-25</span></h2>
         <div className="works-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'40px 28px'}}>
-          {[
-            {n:'01 ADILABAD', t:'The Courtyard Villa', img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'},
-            {n:'02 NIRMAL', t:'Budget Smart Home', img:'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800'},
-            {n:'03 HYD', t:'Modern Duplex', img:'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800'},
-            {n:'04 FARM', t:'Garden Retreat', img:'https://images.unsplash.com/photo-1600573472550-8090b5e0745b?w=800'},
-          ].map(i=>(
-            <div key={i.n} className="img-zoom">
-              <img src={i.img} style={{width:'100%', height:460, objectFit:'cover'}}/>
-              <p style={{fontSize:9, letterSpacing:'2px', opacity:0.4, marginTop:10}}>{i.n}</p>
-              <p className="serif" style={{fontSize:20, marginTop:4}}>{i.t}</p>
-            </div>
-          ))}
+          <div className="img-zoom">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" style={{width:'100%', height:460, objectFit:'cover', background:'#EDE6DC'}}/>
+            <p style={{fontSize:9, letterSpacing:'2px', opacity:0.4, marginTop:10}}>01 ADILABAD</p>
+            <p className="serif" style={{fontSize:20, marginTop:4}}>The Courtyard Villa</p>
+          </div>
+          <div className="img-zoom">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" style={{width:'100%', height:460, objectFit:'cover', background:'#EDE6DC'}}/>
+            <p style={{fontSize:9, letterSpacing:'2px', opacity:0.4, marginTop:10}}>02 NIRMAL</p>
+            <p className="serif" style={{fontSize:20, marginTop:4}}>Budget Smart Home</p>
+          </div>
+          <div className="img-zoom">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop" style={{width:'100%', height:460, objectFit:'cover', background:'#EDE6DC'}}/>
+            <p style={{fontSize:9, letterSpacing:'2px', opacity:0.4, marginTop:10}}>03 HYD</p>
+            <p className="serif" style={{fontSize:20, marginTop:4}}>Modern Duplex</p>
+          </div>
+          <div className="img-zoom">
+            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745b?q=80&w=800&auto=format&fit=crop" style={{width:'100%', height:460, objectFit:'cover', background:'#EDE6DC'}}/>
+            <p style={{fontSize:9, letterSpacing:'2px', opacity:0.4, marginTop:10}}>04 FARM</p>
+            <p className="serif" style={{fontSize:20, marginTop:4}}>Garden Retreat</p>
+          </div>
         </div>
       </div>
 
-      {/* CONTACT */}
       <div id="contact" className="contact" style={{background:'#0F0F0F', color:'#FBF8F3', padding:'80px 56px', display:'flex', justifyContent:'space-between'}}>
         <div>
           <h2 className="serif" style={{fontSize:'56px', lineHeight:0.9}}>Ready to build<br/><span style={{fontStyle:'italic', color:'#C49A6C'}}>with honesty?</span></h2>
